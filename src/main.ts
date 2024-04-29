@@ -57,6 +57,7 @@ async function bootstrap() {
       whitelist: true,
     }),
   );
+  Logger.log(`😎 Global validation pipe initialized!`, `bootstrap`);
 
   await app.listen(process.env.PORT, '0.0.0.0');
   Logger.log(`😎 Application is running on port ${process.env.PORT}`, `bootstrap`);
