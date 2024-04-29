@@ -45,6 +45,7 @@ async function bootstrap() {
     .build();
 
   const document = SwaggerModule.createDocument(app, config, {
+    ignoreGlobalPrefix: false,
     deepScanRoutes: true,
   });
 
