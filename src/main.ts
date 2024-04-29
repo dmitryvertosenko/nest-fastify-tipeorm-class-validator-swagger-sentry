@@ -22,21 +22,21 @@ async function bootstrap() {
     optionsSuccessStatus: 204,
     credentials: true,
   });
-  Logger.log(`😎 CORS enabled!`, 'bootstrap');
+  Logger.log('😎 CORS enabled!', 'bootstrap');
 
   const app = await NestFactory.create<NestFastifyApplication>(AppModule, httpAdapter);
 
   app.setGlobalPrefix('v1');
 
   app.useGlobalPipes(new ValidationPipe({ transform: true, whitelist: true }));
-  Logger.log(`😎 Global validation pipe initialized!`, 'bootstrap');
+  Logger.log('😎 Global validation pipe initialized!', 'bootstrap');
 
   const httpAdapterHost = app.get(HttpAdapterHost);
   app.useGlobalFilters(new AllExceptionsFilter(httpAdapterHost));
-  Logger.log(`😎 Global exceptions filter initialized!`, 'bootstrap');
+  Logger.log('😎 Global exceptions filter initialized!', 'bootstrap');
 
   app.useGlobalGuards(new APIKeyAuthGuard());
-  Logger.log(`😎 Global API key guard initialized!`, 'bootstrap');
+  Logger.log('😎 Global API key guard initialized!', 'bootstrap');
 
   const config = new DocumentBuilder()
     .setTitle('You project api')
@@ -49,7 +49,7 @@ async function bootstrap() {
   });
 
   SwaggerModule.setup('api', app, document);
-  Logger.log(`😎 Swagger module initialized!`, 'bootstrap');
+  Logger.log('😎 Swagger module initialized!', 'bootstrap');
 
   app.useGlobalPipes(
     new ValidationPipe({
@@ -57,7 +57,7 @@ async function bootstrap() {
       whitelist: true,
     }),
   );
-  Logger.log(`😎 Global validation pipe initialized!`, 'bootstrap');
+  Logger.log('😎 Global validation pipe initialized!', 'bootstrap');
 
   await app.listen(process.env.PORT, '0.0.0.0');
   Logger.log(`😎 Application is running on port ${process.env.PORT}`, 'bootstrap');
