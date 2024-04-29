@@ -15,7 +15,7 @@ docker folder - ./docker
 
 bash script - ./run.sh
 
-# Pacakages info
+# Packages info
 
 ## FastifyJS
 
