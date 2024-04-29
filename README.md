@@ -4,8 +4,18 @@
   </a>
 </p>
 <p align="center">
+  <a href="https://fastify.dev/" target="blank">
+    <img src="https://fastify.dev/img/logos/fastify-white.svg" width="320" alt="Nest Logo" />
+  </a>
+</p>
+<p align="center">
   <a href="https://www.docker.com/" target="blank">
     <img src="https://www.docker.com/wp-content/uploads/2022/03/horizontal-logo-monochromatic-white.png" width="320" alt="Nest Logo" />
+  </a>
+</p>
+<p align="center">
+  <a href="https://typeorm.io/" target="blank">
+    <img src="https://github.com/typeorm/typeorm/raw/master/resources/logo_big.png" width="320" alt="Nest Logo" />
   </a>
 </p>
 
